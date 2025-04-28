@@ -20,4 +20,4 @@ DOIP should be allowed tu make use of the full range of error codes that are sup
 The HTTP error codes that should be used are the ones which doesn't have to do with data transfer or are already covered by the DOIP letters. Except when a message request and response interaction went without errors it should still confirm with the 200 Ok code. 
 
 ## REST approach
-The REST approach is consistent with the specifications made in my bachelors thesis. 
+The REST approach is consistent with the specifications made in my bachelors thesis. But it is not complete because the favourable approach is the RPC approach
