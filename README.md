@@ -1,17 +1,17 @@
 # DOIP over HTTP a first approach
 
 In this repository you will find my first approaches to implement a proxy for DOIP over HTTP. 
-It essantialy contains two tries. One for the REST-style approach were I tried to conform to as many REST standarts as possible and one approach with the RPC-style. Both appraoches consist out of a client sending requests and an very basic server. The RPC-style approach is a bit more advanced as the REST approach beacuse while working on it I decided that the RPC approach is the more sensible of them both.\\
-The RPC approach implements a basic concept of sessions where the server refuses to communicte if there is no session id in the message. This warranted a change on every DOIP response or request Message, I added a field where a sessin id can be assinged for every message.
+It essantialy contains two tries. One for the REST-style approach were I tried to conform to as many REST standarts as possible and one approach with the RPC-style. Both approaches consist out of a client sending requests and an very basic server. The RPC-style approach is a bit more advanced as the REST approach beacuse while working on it I decided that the RPC approach is the more sensible of them both.
+The RPC approach implements a basic concept of sessions where the server refuses to communicate if there is no session id in the message. This warranted a change on every DOIP response or request Message, I added a field where a session id can be assinged for every message.
 
 
 ## Specifications for the RPC approach
 
 ### General
-The endpoint to start interactin with the server is the "/Home" endpoint. This endpoint expects a POST HTTP request for every message and otherwise trie to conform to the DOIP specifications. But sadly a whole implementation of the DOIP specification was out of scope for this bachelors thesis.
+The endpoint to start interacting with the server is the "/Home" endpoint. This endpoint expects a POST HTTP request for every message and otherwise tries to conform to the DOIP specifications. But sadly a whole implementation of the DOIP specification was out of scope for this bachelors thesis.
 
 ### 0.DOIP_Op.RequestSession
-This is a new Operation designed by me that is intended to be the first operation that is send in every DOIP over HTTP interaction. It initiates a handsahke were the client asks for a session id and then is assinged one by the server. This session id is then expected to be present in every following message of this interaction.
+This is a new Operation designed by me that is intended to be the first operation that is send in every DOIP over HTTP interaction. It initiates a handshake were the client asks for a session id and then is assinged one by the server. This session id is then expected to be present in every following message of this interaction.
 
 ### Errors
 
