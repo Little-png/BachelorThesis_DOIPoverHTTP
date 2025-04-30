@@ -8,7 +8,7 @@ The RPC approach implements a basic concept of sessions where the server refuses
 ## Specifications for the RPC approach
 
 ### General
-The endpoint to start interacting with the server is the "/Home" endpoint. This endpoint expects a POST HTTP request for every message and otherwise tries to conform to the DOIP specifications. Unfortunately a whole implementation of the DOIP specification was out of scope for this bachelors thesis.
+The endpoint to start interacting with the server is the "/Home" endpoint. This endpoint expects a POST HTTP request for every message and otherwise tries to conform to the DOIP specifications. Unfortunately a whole implementation of the DOIP specifications was out of scope for this bachelors thesis.
 
 ### 0.DOIP_Op.RequestSession
 I designed this new operation with the intend to be the first operation that is sent in every DOIP over HTTP interaction. It initiates a handshake where the client first asks for a session ID and then is assinged one by the server. This session ID is then expected to be present in every following message of this interaction.
